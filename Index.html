@@ -1,1 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VNIT Campus Café</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <header>
+    <nav class="navbar">
+      <h2>Pearl's Café VNIT</h2>
+
+      <div class="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#offers">Offers</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <button id="themeBtn">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="tagline">Built around hostel cravings, CRC stress, and chai breaks ☕</p>
+      <h1>Fuel for lectures, labs & late-night submissions</h1>
+      <p>
+        A student-friendly café concept for VNIT Nagpur with affordable meals,
+        Nagpuri bites, hostel takeaway food, drinks, desserts and exam survival combos.
+      </p>
+
+      <a href="#menu" class="btn">Explore Menu</a>
+      <button onclick="examMode()" class="btn secondary-btn">📚 Exam Week Mode</button>
+    </div>
+  </section>
+
+  <section class="features">
+    <div>📚 Study Combos</div>
+    <div>💸 Budget Friendly</div>
+    <div>⚡ Quick Takeaway</div>
+    <div>🍊 Nagpuri Touch</div>
+  </section>
+
+  <section class="founder-note">
+    <h2>Why I Built This</h2>
+    <p>
+      As a college student, I wanted to create a café idea that feels close to real VNIT life —
+      hostel cravings, endsem pressure, mess-food mood swings, late-night submissions,
+      group studies, and that one cup of chai that somehow fixes everything.
+    </p>
+  </section>
+
+  <section class="special">
+    <h2>Today's VNIT Special</h2>
+
+    <div class="special-card">
+      <h3>VNIT Endsem Survival Thali</h3>
+      <p>Tarri Poha + Cutting Chai + Chocolate Brownie + Extra Motivation</p>
+      <h4>Only ₹119</h4>
+    </div>
+  </section>
+
+  <section class="mood-order">
+    <h2>Order By Mood</h2>
+
+    <div class="mood-grid">
+      <div>😵 Endsem Panic → Cold Coffee + Brownie</div>
+      <div>💻 Assignment Night → Maggi + Chai</div>
+      <div>💔 Sad Hostel Evening → Hot Chocolate</div>
+      <div>🎉 Post-Exam Mood → Ice Cream Sundae</div>
+      <div>📚 Library Grind → Sandwich + Coffee</div>
+      <div>👥 Group Study → Project Team Platter</div>
+    </div>
+  </section>
+
+  <section id="menu" class="menu-section">
+    <h2>Campus Menu</h2>
+    <p class="section-subtitle">
+      Choose according to your mood, budget, deadline pressure and hostel cravings.
+    </p>
+
+    <div class="filter-buttons">
+      <button onclick="filterMenu('all')">All</button>
+      <button onclick="filterMenu('chai')">Chai & Coffee</button>
+      <button onclick="filterMenu('snacks')">Snacks</button>
+      <button onclick="filterMenu('meals')">Meals</button>
+      <button onclick="filterMenu('combos')">Combos</button>
+      <button onclick="filterMenu('nagpuri')">Nagpuri Bites</button>
+      <button onclick="filterMenu('homefood')">Home Food</button>
+      <button onclick="filterMenu('takeaway')">Hostel Takeaway</button>
+      <button onclick="filterMenu('drinks')">Drinks</button>
+      <button onclick="filterMenu('desserts')">Ice Creams</button>
+      <button onclick="filterMenu('group')">Group Combos</button>
+      <button onclick="filterMenu('couple')">Couple Deals</button>
+      <button onclick="filterMenu('professor')">Professor Picks</button>
+      <button onclick="filterMenu('membership')">Membership</button>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-card chai">
+        <h3>VNIT Cutting Chai</h3>
+        <p>Strong chai for 8 AM lectures and attendance struggles.</p>
+        <span>₹15</span>
+      </div>
+
+      <div class="menu-card chai">
+        <h3>CRC Cold Coffee</h3>
+        <p>Perfect before exams, vivas and project submissions.</p>
+        <span>₹60</span>
+      </div>
+
+      <div class="menu-card chai">
+        <h3>Attendance Booster Chai</h3>
+        <p>Attendance low? At least caffeine high.</p>
+        <span>₹20</span>
+      </div>
+
+      <div class="menu-card snacks">
+        <h3>Hostel Maggi</h3>
+        <p>Maggi solves 73% of engineering problems.</p>
+        <span>₹45</span>
+      </div>
+
+      <div class="menu-card snacks">
+        <h3>EEE Cheese Toast</h3>
+        <p>Crispy, cheesy and perfect after lab submissions.</p>
+        <span>₹55</span>
+      </div>
+
+      <div class="menu-card snacks">
+        <h3>Sev Chutney Sandwich</h3>
+        <p>A crunchy Nagpuri twist on a regular sandwich.</p>
+        <span>₹60</span>
+      </div>
+
+      <div class="menu-card meals">
+        <h3>Library Lunch Bowl</h3>
+        <p>Rice, paneer, veggies and spicy chutney.</p>
+        <span>₹110</span>
+      </div>
+
+      <div class="menu-card meals">
+        <h3>Workshop Sandwich</h3>
+        <p>Grilled sandwich for long practical days.</p>
+        <span>₹75</span>
+      </div>
+
+      <div class="menu-card nagpuri">
+        <h3>Tarri Poha</h3>
+        <p>Nagpur-style spicy poha for early morning lectures.</p>
+        <span>₹35</span>
+      </div>
+
+      <div class="menu-card nagpuri">
+        <h3>Saoji Paneer Rice Bowl</h3>
+        <p>A spicy Nagpuri-inspired bowl for serious hunger.</p>
+        <span>₹120</span>
+      </div>
+
+      <div class="menu-card nagpuri">
+        <h3>Nagpuri Orange Cold Coffee</h3>
+        <p>A fun fusion drink inspired by Nagpur oranges.</p>
+        <span>₹75</span>
+      </div>
+
+      <div class="menu-card homefood">
+        <h3>Ghar Jaisa Dal Chawal</h3>
+        <p>Simple comfort food for days when mess food disappoints.</p>
+        <span>₹85</span>
+      </div>
+
+      <div class="menu-card homefood">
+        <h3>Aloo Paratha + Curd</h3>
+        <p>Filling homemade-style combo before long lab sessions.</p>
+        <span>₹70</span>
+      </div>
+
+      <div class="menu-card homefood">
+        <h3>Mom-Style Veg Pulao</h3>
+        <p>Light, warm and comforting lunch for busy college days.</p>
+        <span>₹95</span>
+      </div>
+
+      <div class="menu-card homefood">
+        <h3>Hostel Sunday Egg Curry Bowl</h3>
+        <p>Egg curry with rice, made for Sunday hostel cravings.</p>
+        <span>₹110</span>
+      </div>
+
+      <div class="menu-card combos">
+        <h3>Night Coder Combo</h3>
+        <p>Cold coffee + fries + chocolate brownie.</p>
+        <span>₹149</span>
+      </div>
+
+      <div class="menu-card combos">
+        <h3>KC Hostel Combo</h3>
+        <p>Chai + Maggi + garlic bread.</p>
+        <span>₹99</span>
+      </div>
+
+      <div class="menu-card combos">
+        <h3>Lab Viva Maggi Combo</h3>
+        <p>Maggi + chai + one motivational brownie.</p>
+        <span>₹109</span>
+      </div>
+
+      <div class="menu-card takeaway">
+        <h3>Late Night Fries Bucket</h3>
+        <p>Crispy peri peri fries for midnight coding sessions.</p>
+        <span>₹99</span>
+      </div>
+
+      <div class="menu-card takeaway">
+        <h3>Hostel Tiffin Box</h3>
+        <p>Compact takeaway meal for students running to classes.</p>
+        <span>₹89</span>
+      </div>
+
+      <div class="menu-card takeaway">
+        <h3>Mini Momos Pack</h3>
+        <p>Steamed momos with spicy red chutney.</p>
+        <span>₹70</span>
+      </div>
+
+      <div class="menu-card takeaway">
+        <h3>Cheesy Garlic Bread Box</h3>
+        <p>Easy takeaway snack for evening cravings.</p>
+        <span>₹85</span>
+      </div>
+
+      <div class="menu-card drinks">
+        <h3>VNIT Oreo Shake</h3>
+        <p>Thick cold shake for Nagpur summer heat.</p>
+        <span>₹90</span>
+      </div>
+
+      <div class="menu-card drinks">
+        <h3>Mango Mastani</h3>
+        <p>Rich mango dessert drink for hostel evenings.</p>
+        <span>₹110</span>
+      </div>
+
+      <div class="menu-card drinks">
+        <h3>Cold Cocoa Blast</h3>
+        <p>Chocolate lovers' favourite hostel drink.</p>
+        <span>₹95</span>
+      </div>
+
+      <div class="menu-card drinks">
+        <h3>Fresh Lime Soda</h3>
+        <p>Refreshing drink after long practical labs.</p>
+        <span>₹45</span>
+      </div>
+
+      <div class="menu-card desserts">
+        <h3>Brownie Ice Cream Cup</h3>
+        <p>Warm brownie with vanilla ice cream.</p>
+        <span>₹120</span>
+      </div>
+
+      <div class="menu-card desserts">
+        <h3>Chocolate Sundae</h3>
+        <p>Classic cold dessert for stress eating after exams.</p>
+        <span>₹99</span>
+      </div>
+
+      <div class="menu-card desserts">
+        <h3>Butterscotch Tub</h3>
+        <p>Student favourite budget dessert option.</p>
+        <span>₹80</span>
+      </div>
+
+      <div class="menu-card desserts">
+        <h3>Cookie Crunch Scoop</h3>
+        <p>Crunchy cookies mixed with creamy ice cream.</p>
+        <span>₹85</span>
+      </div>
+
+      <div class="menu-card group">
+        <h3>Squad Maggi Combo</h3>
+        <p>4 Maggi bowls + 4 cutting chai for hostel groups.</p>
+        <span>₹199</span>
+      </div>
+
+      <div class="menu-card group">
+        <h3>Project Team Platter</h3>
+        <p>Fries, momos, garlic bread and cold coffee for 4 students.</p>
+        <span>₹349</span>
+      </div>
+
+      <div class="menu-card group">
+        <h3>Birthday Treat Pack</h3>
+        <p>Brownie cups + sundaes + drinks for small celebrations.</p>
+        <span>₹499</span>
+      </div>
+
+      <div class="menu-card couple">
+        <h3>Campus Couple Coffee Date</h3>
+        <p>2 cold coffees + brownie cup + peri peri fries.</p>
+        <span>₹229</span>
+      </div>
+
+      <div class="menu-card couple">
+        <h3>Library Walk Combo</h3>
+        <p>2 hot coffees + cheese toast + cookie crunch scoop.</p>
+        <span>₹189</span>
+      </div>
+
+      <div class="menu-card professor">
+        <h3>Faculty Chai Break</h3>
+        <p>Elaichi chai + grilled sandwich with professor discount.</p>
+        <span>₹85</span>
+      </div>
+
+      <div class="menu-card professor">
+        <h3>Department Meeting Box</h3>
+        <p>Tea, coffee and light snacks for faculty meetings.</p>
+        <span>₹399</span>
+      </div>
+
+      <div class="menu-card membership">
+        <h3>Bronze Student Pass</h3>
+        <p>5% off on chai, coffee and snacks for casual visitors.</p>
+        <span>₹49/month</span>
+      </div>
+
+      <div class="menu-card membership">
+        <h3>Silver Hostel Pass</h3>
+        <p>10% off on takeaway food, drinks and late-night snacks.</p>
+        <span>₹99/month</span>
+      </div>
+
+      <div class="menu-card membership">
+        <h3>Gold Endsem Pass</h3>
+        <p>15% off on combos, desserts and study-night orders.</p>
+        <span>₹149/month</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="emergency">
+    <h2>2 AM Hostel Emergency Menu</h2>
+
+    <div class="emergency-card">
+      <h3>Submission Night Combo</h3>
+      <p>Cold coffee + fries + instant noodles for deadline survival.</p>
+      <span>₹149</span>
+    </div>
+  </section>
+
+  <section id="offers" class="offers">
+    <h2>Campus Offers & Memberships</h2>
+    <p>
+      Special discounts for hostel groups, project teams, couples, faculty members
+      and regular student customers.
+    </p>
+
+    <div class="offer-grid">
+      <div>
+        <h3>👥 Group Discount</h3>
+        <p>Flat 10% off on orders above ₹299.</p>
+      </div>
+
+      <div>
+        <h3>💻 Project Night Offer</h3>
+        <p>Free fries on group orders after 8 PM.</p>
+      </div>
+
+      <div>
+        <h3>👩‍🏫 Professor Discount</h3>
+        <p>10% off for faculty and department orders.</p>
+      </div>
+
+      <div>
+        <h3>💛 Membership Pass</h3>
+        <p>Monthly plans for students who order regularly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="study-space">
+    <h2>Study-Friendly Café Space</h2>
+
+    <div class="study-grid">
+      <div>🔌 Charging Points</div>
+      <div>📶 Free WiFi</div>
+      <div>📚 Quiet Corner</div>
+      <div>👥 Group Discussion Table</div>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews">
+    <h2>What VNITians Say</h2>
+
+    <div class="review-grid">
+      <div class="review-card">
+        “Better than hostel mess during endsems honestly.”
+        <br><b>— EEE 1st Year</b>
+      </div>
+
+      <div class="review-card">
+        “Cold coffee carried my attendance.”
+        <br><b>— Mechanical Student</b>
+      </div>
+
+      <div class="review-card">
+        “Best paired with gossip after lab.”
+        <br><b>— CSE Student</b>
+      </div>
+    </div>
+  </section>
+
+  <section class="student-note">
+    <h2>A Small Note For VNITians</h2>
+    <p>
+      This website idea is designed around real college life — rushing from hostel
+      to CRC, late-night submissions, budget issues, group projects, exam stress,
+      and comfort food cravings.
+    </p>
+  </section>
+
+  <section class="order">
+    <h2>Quick Order</h2>
+    <p>Hungry between lectures? Send a quick WhatsApp order.</p>
+
+    <a class="btn" href="https://wa.me/917977250385?text=Hi%20I%20want%20to%20order%20from%20VNIT%20Campus%20Cafe" target="_blank">
+      Order on WhatsApp
+    </a>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact & Location</h2>
+    <p>📍 Opp. to CRC, VNIT Nagpur Campus</p>
+    <p>📧 bt25eee062@students.vnit.ac.in</p>
+    <p>⏰ Open: 24 x 7 </p>
+  </section>
+
+  <footer>
+    <p>Designed & Developed by Pallavi Das | VNIT Campus Café Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
